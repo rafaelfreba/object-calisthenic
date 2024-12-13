@@ -37,6 +37,11 @@ class StudentTest extends TestCase
         );
     }
 
+    public function testFullNameMustBeRepresentedAsString()
+    {
+        self::assertEquals('Vinicius Dias', $this->student->getFullName());
+    }
+
     public function testStudentWithoutWatchedVideosHasAccess()
     {
         self::assertTrue($this->student->hasAccess());
